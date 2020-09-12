@@ -1,15 +1,16 @@
 {
-  "name": "electron-boilerplate",
-  "productName": "Electron Boilerplate",
-  "description": "Starter for your Electron application",
+  "name": "interflux-admin-electron",
+  "productName": "Interflux Admin",
+  "description": "This Electron app extends the Interflux Admin website into a Mac and Windows app so we can leverage non-browser capabilities.",
   "version": "0.0.0",
   "private": true,
-  "author": "Mr. Gumby <mr.gumby@example.com>",
-  "copyright": "© 2017, Gumby inc.",
-  "homepage": "http://example.com",
+  "author": "Jan Werkhoven <j.werkhoven@interflux.com>",
+  "copyright": "© 2020, Interflux Electronics NV, Belgium",
+  "homepage": "https://admin.interflux.com",
+  "inspired-from": "https://github.com/szwacz/electron-boilerplate",
   "main": "app/background.js",
   "build": {
-    "appId": "com.example.electron-boilerplate",
+    "appId": "com.interflux.admin",
     "files": [
       "app/**/*",
       "node_modules/**/*",
@@ -21,14 +22,15 @@
     "publish": null
   },
   "scripts": {
+    "serve": "node build/start.js",
+    "test": "yarn test:unit && yarn test:e2e",
+    "test:e2e": "yarn test:prepare-e2e && mocha temp/e2e.js --require source-map-support/register",
+    "test:unit": "yarn test:prepare-unit && electron-mocha temp/specs.js --renderer --require source-map-support/register",
+    "test:prepare-unit": "webpack --config=build/webpack.unit.config.js --env=test --display=none",
+    "test:prepare-e2e": "webpack --config=build/webpack.app.config.js --env=test --display=none && webpack --config=build/webpack.e2e.config.js --env=test --display=none",
     "postinstall": "electron-builder install-app-deps",
-    "preunit": "webpack --config=build/webpack.unit.config.js --env=test --display=none",
-    "unit": "electron-mocha temp/specs.js --renderer --require source-map-support/register",
-    "pree2e": "webpack --config=build/webpack.app.config.js --env=test --display=none && webpack --config=build/webpack.e2e.config.js --env=test --display=none",
-    "e2e": "mocha temp/e2e.js --require source-map-support/register",
-    "test": "npm run unit && npm run e2e",
-    "start": "node build/start.js",
-    "release": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder"
+    "build": "yarn build:mac",
+    "build:mac": "yarn test && webpack --config=build/webpack.app.config.js --env=production && electron-builder"
   },
   "dependencies": {
     "fs-jetpack": "^2.1.0"
