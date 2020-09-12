@@ -26,10 +26,17 @@ const osMap = {
   linux: "Linux"
 };
 
-document.querySelector("#app").style.display = "block";
-document.querySelector("#greet").innerHTML = greet();
-document.querySelector("#os").innerHTML = osMap[process.platform];
-document.querySelector("#author").innerHTML = manifest.author;
-document.querySelector("#env").innerHTML = env.name;
-document.querySelector("#electron-version").innerHTML =
-  process.versions.electron;
+const iframe = document.createElement("iframe");
+iframe.setAttribute("src", env.iframeSrc);
+iframe.style.width = "100%";
+iframe.style.height = "100%";
+document.body.appendChild(iframe);
+
+// document.querySelector("iframe").style.display = "block";
+// document.querySelector("#app").style.display = "block";
+// document.querySelector("#greet").innerHTML = greet();
+// document.querySelector("#os").innerHTML = osMap[process.platform];
+// document.querySelector("#author").innerHTML = manifest.author;
+// document.querySelector("#env").innerHTML = env.name;
+// document.querySelector("#electron-version").innerHTML =
+//   process.versions.electron;
