@@ -50,7 +50,7 @@ Deploy:
 yarn deploy
 ```
 
-## Inspired from:
+## Inspired from
 
 [https://github.com/szwacz/electron-boilerplate](https://github.com/szwacz/electron-boilerplate)
 
