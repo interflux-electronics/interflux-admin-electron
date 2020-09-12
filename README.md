@@ -38,19 +38,22 @@ yarn test:e2e
 
 ## Production
 
-#### Build
-
 Build installers for Mac, Windows and Linux:
 
 ```
 yarn build
 ```
 
-#### Deploy
+Deploy:
 
-TODO
-
+```
+yarn deploy
+```
 
 ## Inspired from:
 
 [https://github.com/szwacz/electron-boilerplate](https://github.com/szwacz/electron-boilerplate)
+
+## Contact
+
+j.werkhoven@interflux.com
