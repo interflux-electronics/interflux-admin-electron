@@ -29,8 +29,8 @@
     "test:prepare-unit": "webpack --config=build/webpack.unit.config.js --env=test --display=none",
     "test:prepare-e2e": "webpack --config=build/webpack.app.config.js --env=test --display=none && webpack --config=build/webpack.e2e.config.js --env=test --display=none",
     "postinstall": "electron-builder install-app-deps",
-    "build": "yarn build:mac",
-    "build:mac": "yarn test && webpack --config=build/webpack.app.config.js --env=production && electron-builder"
+    "build": "yarn test && webpack --config=build/webpack.app.config.js --env=production && electron-builder -mwl",
+    "deploy": "echo 'TODO'"
   },
   "dependencies": {
     "fs-jetpack": "^2.1.0"
