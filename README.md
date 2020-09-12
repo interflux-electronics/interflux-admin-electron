@@ -1,12 +1,20 @@
 # Interflux Admin Electron app
 
-This [Electron](https://www.electronjs.org/) app allows us to compile the [Interflux Admin website](https://interflux.com) into an installable Windows, Mac and Linux app.
+#### What
 
-Why? People prefer native apps than having to go to websites. Also, the Electron app allows us to extend the Admin website with native OS capabilities (read: things you cannot do in a browser).
+This [Electron app](https://www.electronjs.org/) wraps the [Interflux Admin website](https://interflux.com) into an installable Windows, Mac and Linux app.
 
-What is the app for? It allows everyone at the company [Interflux Electronics] to create content for their website, publish articles, upload images and videos, process orders and more, all from one place.
+#### Why
 
-## Setup
+The Interflux team prefers native apps over having to go to website. Also, the Electron app allows us to extend the Admin website with native OS capabilities (read: things you cannot do in a browser).
+
+#### Purpose
+
+This app enables the [Interflux Electronics](https://interflux.com) team and their partners to create content for their websites, publish articles, download images, upload videos, process orders and more, all from one place.
+
+## Development
+
+Get set up:
 
 ```
 git clone git@github.com:interflux-electronics/interflux-admin-electron.git
@@ -14,13 +22,13 @@ nvm install
 yarn install
 ```
 
-## Serve local instance
+Serve a local instance:
 
 ```
 yarn serve
 ```
 
-## Run tests
+Run tests:
 
 ```
 yarn test
@@ -28,22 +36,20 @@ yarn test:unit
 yarn test:e2e
 ```
 
-Using:
+## Production
 
-- [electron-mocha](https://github.com/jprichardson/electron-mocha)
-- [Chai](http://chaijs.com/api/assert/)
-- [Mocha](https://mochajs.org/)
-- [Spectron](http://electron.atom.io/spectron/)
+#### Build
 
-## Build
-
-Compile app into Mac & Windows installers:
+Build installers for Mac, Windows and Linux:
 
 ```
-yarn build:mac
+yarn build
 ```
 
-Using: [electron-builder](https://github.com/electron-userland/electron-builder)
+#### Deploy
+
+TODO
+
 
 ## Inspired from:
 
