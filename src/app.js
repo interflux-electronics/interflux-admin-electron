@@ -30,6 +30,10 @@ const iframe = document.createElement("iframe");
 iframe.setAttribute("src", env.iframeSrc);
 iframe.style.width = "100%";
 iframe.style.height = "100%";
+iframe.onload = function() {
+  const loading = document.getElementById("loading");
+  loading.remove();
+};
 document.body.appendChild(iframe);
 
 // document.querySelector("iframe").style.display = "block";

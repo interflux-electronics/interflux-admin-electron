@@ -1,10 +1,9 @@
-body {
-  min-height: 100vh;
-  background: #163759;
-  margin: 0;
-}
+/* All the styles we don't need for the loading state */
+
 iframe {
+  display: block;
   position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
   right: 0;
