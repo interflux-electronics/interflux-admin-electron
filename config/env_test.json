@@ -1,5 +1,4 @@
 {
   "name": "test",
-  "iframeSrc": "http://localhost:4300",
-  "description": "Add here any environment specific stuff you like."
+  "iframeSrc": "http://localhost:4300"
 }
