@@ -13,9 +13,7 @@ describe("hello world", () => {
 
   it("should load test environment variables", () => {
     expect(env.name).to.equal("test");
-    expect(env.description).to.equal(
-      "Add here any environment specific stuff you like."
-    );
+    expect(env.iframeSrc).to.equal("http://localhost:4300");
   });
 
   it("babel features should work", () => {
