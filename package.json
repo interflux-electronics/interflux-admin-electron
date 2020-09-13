@@ -2,7 +2,7 @@
   "name": "interflux-admin-electron",
   "productName": "Interflux Admin",
   "description": "This Electron app extends the Interflux Admin website into a Mac and Windows app so we can leverage non-browser capabilities.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "author": "Jan Werkhoven <j.werkhoven@interflux.com>",
   "copyright": "© 2020, Interflux Electronics NV, Belgium",
