@@ -8,6 +8,7 @@ import url from "url";
 import { app, Menu } from "electron";
 import { devMenuTemplate } from "./menu/dev_menu_template";
 import { editMenuTemplate } from "./menu/edit_menu_template";
+import { appMenuTemplate } from "./menu/app_menu_template";
 import createWindow from "./helpers/window";
 
 // Special module holding environment variables which you declared
@@ -15,10 +16,10 @@ import createWindow from "./helpers/window";
 import env from "env";
 
 const setApplicationMenu = () => {
-  const menus = [editMenuTemplate];
-  if (env.name !== "production") {
-    menus.push(devMenuTemplate);
-  }
+  const menus = [appMenuTemplate, editMenuTemplate];
+  // if (env.name !== "production") {
+  //   menus.push(devMenuTemplate);
+  // }
   Menu.setApplicationMenu(Menu.buildFromTemplate(menus));
 };
 
